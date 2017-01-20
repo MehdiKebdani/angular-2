@@ -1,0 +1,39 @@
+<h1>Product {{this.product?.id}}</h1>
+
+<div class="form-group" style="margin:0px 100px; text-align:center;">
+
+	<div class="input-group">
+		<div class="input-group-addon">Id</div>
+		<input [value]="this.product.id" class="form-control" disabled="disabled">
+	</div>
+	<br />
+
+	<div class="input-group">
+		<div class="input-group-addon">Name</div>
+		<input [value]="this.product.name" class="form-control" disabled="disabled">
+	</div>
+	<br />
+
+	<div class="input-group">
+		<div class="input-group-addon">Price</div>
+		<input [value]="this.product.price" type="text" class="form-control" disabled="disabled">
+	</div>
+	<br />
+
+	<div class="input-group">
+		<div class="input-group-addon">Type</div>
+		<input [value]="this.product.type" class="form-control" disabled="disabled">
+	</div>
+	<br />
+
+	<p>
+		<button class="btn btn-default" routerLink="/">
+			<i class="fa fa-backward" aria-hidden="true"></i> Back
+		</button>
+
+		<button class="btn btn-default" routerLink="/details/999">
+			<i class="fa " aria-hidden="true"></i> Test ID=999
+		</button>
+	</p>
+	
+</div>
