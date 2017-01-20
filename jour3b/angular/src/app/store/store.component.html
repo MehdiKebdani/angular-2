@@ -1,0 +1,23 @@
+<h1>Products list</h1>
+
+
+<table class="table table-striped">
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Type</th>
+	</tr>
+	<tr *ngFor="let product of this.store.products" (click)="elemClick(product)">
+		<td>{{product.id}}</td>
+		<td>{{product.name}}</td>
+		<td>{{product.price | euros}}</td>
+		<td>{{product.type}}</td>
+	</tr>
+</table>
+
+<p>
+	<button class="btn btn-success" routerLink="/new">
+		<i class="fa fa-plus" aria-hidden="true"></i> Add
+	</button>
+</p>

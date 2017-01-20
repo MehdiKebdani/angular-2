@@ -1,0 +1,32 @@
+<h1>Add new product</h1>
+
+<div class="form-group" style="margin:0px 100px; text-align:center;">
+
+	<div class="input-group">
+		<div class="input-group-addon">Name</div>
+		<input #inputName class="form-control">
+	</div>
+	<br />
+
+	<div class="input-group">
+		<div class="input-group-addon">Price</div>
+		<input #inputPrice type="text" class="form-control" >
+	</div>
+	<br />
+
+	<div class="input-group">
+		<div class="input-group-addon">Type</div>
+		<input #inputType class="form-control" >
+	</div>
+	<br />
+
+	<p>
+		<button class="btn btn-default" routerLink="/">
+			<i class="fa fa-backward" aria-hidden="true"></i> Back
+		</button>
+		<button class="btn btn-success" (click)="onClick(inputName.value, inputPrice.value, inputType.value)">
+			<i class="fa fa-plus" aria-hidden="true"></i> Add
+		</button>
+	</p>
+
+</div>
