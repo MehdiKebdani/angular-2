@@ -1,0 +1,39 @@
+<div style="margin:20px; width: 600px;">
+
+	<button class="btn btn-default" (click)="reset();">
+		<i class="fa" aria-hidden="true"></i>
+		Reset
+	</button>
+
+	<app-input-product (onSubmit)="onChildSubmit($event)"></app-input-product>
+
+	<br />
+	<br />
+	
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Type</th>
+		</tr>
+		<tr *ngFor="let product of store.products" (click)="elemClick(product)" [ngClass]="getProductClass(product)">
+			<td>{{product.id}}</td>
+			<td>{{product.name}}</td>
+			<td>{{product.price | euros}}</td>
+			<td>{{product.type}}</td>
+		</tr>
+	</table>
+
+	<p>
+		<button class="btn btn-default" (click)="clear();" [disabled]="isDisabled()">
+			<i class="fa fa-eraser" aria-hidden="true"></i>
+			Clear
+		</button>
+
+		<button class="btn btn-danger" (click)="remove();" [disabled]="isDisabled()">
+			<i class="fa fa-trash" aria-hidden="true"></i>
+			Remove <span *ngIf="NbSelected > 0">({{NbSelected}})</span>
+		</button>
+	</p>
+</div>

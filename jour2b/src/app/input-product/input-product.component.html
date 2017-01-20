@@ -1,0 +1,24 @@
+<div class="form-group" style="margin:0px 100px; text-align:center;">
+
+	<div class="input-group">
+		<div class="input-group-addon">Name</div>
+		<input #inputName class="form-control">
+	</div>
+	<br />
+
+	<div class="input-group">
+		<div class="input-group-addon">Price</div>
+		<input #inputPrice type="text" class="form-control" >
+	</div>
+	<br />
+
+	<div class="input-group">
+		<div class="input-group-addon">Type</div>
+		<input #inputType class="form-control" >
+	</div>
+	<br />
+
+	<button (click)="onClick(inputName.value, inputPrice.value, inputType.value)" class="btn btn-default">Add Product !</button>
+	<br>
+	
+</div>

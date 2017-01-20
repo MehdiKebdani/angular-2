@@ -1,0 +1,16 @@
+<div *ngIf = false>
+	I can do additions: {{ 1 + 41 }}
+	<br>
+	And show variables: {{ message }}
+	<br>
+	{{ 'HI IM A PIPE' | lower }}
+	<br>
+	<input #inputVal>
+	<br>
+	{{ inputVal.value }}
+	<br>
+	<button [style.width.px]="mySize" (click)="onClick(inputVal.value)">Click me !</button>
+<p appHighlight>Hi i'm hilighted</p>
+</div>
+
+<app-store></app-store>
